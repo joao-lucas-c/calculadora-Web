@@ -1,4 +1,4 @@
-# 🧮 Calculadora Web | Histórico Persistente em JSON
+# 🧮 Calculadora Web 
 
 Aplicação desktop para web com foco em usabilidade, precisão matemática e **persistência de dados**. O diferencial técnico do projeto é o gerenciamento de histórico de operações passadas utilizando **JSON** e `localStorage`.
 
