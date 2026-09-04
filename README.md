@@ -4,7 +4,7 @@ Aplicação desktop para web com foco em usabilidade, precisão matemática e **
 
 ---
 
-## 🎯 Diferenciais Técnicos
+## Diferenciais Técnicos
 
 | Recurso | Implementação Técnica | Impacto na UX |
 | :--- | :--- | :--- |
@@ -15,7 +15,7 @@ Aplicação desktop para web com foco em usabilidade, precisão matemática e **
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - **Operações Padrão:** Soma, subtração, multiplicação, divisão, porcentagem (`%`) e inversão de sinal (`±`).
 - **Painel Lateral Retrátil:** Interface animada via CSS3 (`0.2s ease`) para exibição do histórico.
@@ -24,7 +24,7 @@ Aplicação desktop para web com foco em usabilidade, precisão matemática e **
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 * **HTML5:** Estruturação semântica e acessibilidade.
 * **CSS3:** Flexbox, temas escuros contrastantes e transições visuais.
