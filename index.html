@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="css/estilo.css">
+    
+</head>
+<body>
+    
+
+    <div class="app-container">
+
+        <div class="calculadora">
+
+            <div class="cabecalho">
+                <h1 class="titulo">Calculadora</h1>
+                <button 
+                    class="btn-historico" 
+                    id="botaoHistorico" 
+                    onclick="alternarHistorico()"
+                    aria-label="Ver histórico de cálculos"
+                    aria-expanded="false"
+                >
+                    🕘
+                </button>
+            </div>
+
+            <input 
+                type="text" 
+                id="visor" 
+                value="0" 
+                readonly 
+                aria-live="polite" 
+                aria-label="Visor da calculadora"
+            >
+
+            <div class="linha">
+                <button class="btn btn-funcao border btn-calc w-25-custom" onclick="processarClique('C')" aria-label="Limpar tudo">C</button>
+                <button class="btn btn-funcao border btn-calc w-25-custom" onclick="processarClique('DEL')" aria-label="Apagar último dígito">⌫</button>
+                <button class="btn btn-funcao border btn-calc w-25-custom" onclick="processarClique('%')" aria-label="Porcentagem">%</button>
+                <button class="btn btn-operador border btn-calc w-25-custom" onclick="processarClique('/')" aria-label="Dividir" data-op="/">/</button>
+            </div>
+
+            <div class="linha">
+                <button class="btn btn-numero border border-light btn-calc w-25-custom" onclick="processarClique('7')">7</button>
+                <button class="btn btn-numero border border-light btn-calc w-25-custom" onclick="processarClique('8')">8</button>
+                <button class="btn btn-numero border border-light btn-calc w-25-custom" onclick="processarClique('9')">9</button>
+                <button class="btn btn-operador border btn-calc w-25-custom" onclick="processarClique('*')" aria-label="Multiplicar" data-op="*">×</button>
+            </div>
+
+            <div class="linha">
+                <button class="btn btn-numero border border-light btn-calc w-25-custom" onclick="processarClique('4')">4</button>
+                <button class="btn btn-numero border border-light btn-calc w-25-custom" onclick="processarClique('5')">5</button>
+                <button class="btn btn-numero border border-light btn-calc w-25-custom" onclick="processarClique('6')">6</button>
+                <button class="btn btn-operador border btn-calc w-25-custom" onclick="processarClique('-')" aria-label="Subtrair" data-op="-">−</button>
+            </div>
+
+            <div class="linha">
+                <button class="btn btn-numero border border-light btn-calc w-25-custom" onclick="processarClique('1')">1</button>
+                <button class="btn btn-numero border border-light btn-calc w-25-custom" onclick="processarClique('2')">2</button>
+                <button class="btn btn-numero border border-light btn-calc w-25-custom" onclick="processarClique('3')">3</button>
+                <button class="btn btn-operador border btn-calc w-25-custom" onclick="processarClique('+')" aria-label="Somar" data-op="+">+</button>
+            </div>
+
+            <div class="linha">
+                <button class="btn btn-funcao border btn-calc w-25-custom" onclick="processarClique('±')" aria-label="Trocar sinal">±</button>
+                <button class="btn btn-numero border border-light btn-calc w-25-custom" onclick="processarClique('0')">0</button>
+                <button class="btn btn-numero border border-light btn-calc w-25-custom" onclick="processarClique('.')">.</button>
+                <button class="btn btn-operador border btn-calc w-25-custom" onclick="processarClique('=')" aria-label="Igual">=</button>
+            </div>
+
+        </div>
+
+        <div class="painel-historico" id="painelHistorico">
+            <div class="painel-historico-conteudo">
+                <div class="painel-historico-cabecalho">
+                    <h2 class="painel-historico-titulo">Histórico</h2>
+                    <button class="btn-limpar-historico" onclick="limparHistorico()">limpar</button>
+                </div>
+                <ul class="lista-historico" id="listaHistorico"></ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
